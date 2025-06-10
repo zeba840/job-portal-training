@@ -1,0 +1,14 @@
+# Angular-related
+node_modules/
+dist/
+.angular/
+tmp/
+coverage/
+
+# Environment files
+.env
+*.local
+
+# System files
+.DS_Store
+Thumbs.db

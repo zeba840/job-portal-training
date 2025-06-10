@@ -1,0 +1,8 @@
+/* Basic styling for enroll popup */
+input, select, textarea {
+  outline: none;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
