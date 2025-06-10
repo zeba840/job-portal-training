@@ -4,5 +4,6 @@ import { FusionFinancialsComponent } from './fusion-financials/fusion-financials
 
 export const routes: Routes = [
   {path: "home", component: HomePageComponent},
+  {path: " ", component: HomePageComponent},
   {path: "fusion-financials", component: FusionFinancialsComponent}
 ];
