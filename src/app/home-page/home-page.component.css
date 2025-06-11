@@ -1,3 +1,14 @@
 html {
   scroll-behavior: smooth;
 }
+
+section[id] {
+  scroll-margin-top: 100px; /* Prevents nav overlap */
+}
+
+/* Responsive nav if needed */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* You can later replace this with a hamburger menu */
+  }
+}
