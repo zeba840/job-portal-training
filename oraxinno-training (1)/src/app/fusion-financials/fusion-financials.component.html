@@ -1,0 +1,91 @@
+
+<!-- Angular Component: Oracle Fusion Financials Course Page -->
+
+<div class="container mx-auto px-4 pt-28 pb-10">
+
+  <!-- Hero Section -->
+  <section class="text-center mb-10">
+    <h1 class="text-4xl font-bold text-indigo-700 mb-4">
+      Master Oracle Fusion Financials with Practical, Job-Focused Training
+    </h1>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+      Learn Oracle Fusion ERP Financials through hands-on training and real-world projects. Gain practical experience across core financial modules and prepare for high-demand roles with the support of experienced consultants.
+    </p>
+    <button (click)="showEnrollForm = true" class="bg-indigo-600 text-white px-6 py-3 rounded shadow font-semibold">
+      Enroll Now
+    </button>
+  </section>
+
+  <!-- Why Choose OraXINNO -->
+  <section class="bg-gray-50 p-8 rounded shadow mb-10 max-w-5xl mx-auto">
+    <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Why Choose OraXINNO</h2>
+    <ul class="space-y-3 text-gray-800">
+      <li><strong>Comprehensive Curriculum:</strong> Covers GL, AP, AR, FA, Cash Management, Tax, and Expenses. Includes workflows, personalization, reports (BI, OTBI), and integrations.</li>
+      <li><strong>Real Project Exposure:</strong> Mock implementation cycles including design, setup, SIT, UAT, and production scenarios.</li>
+      <li><strong>Experienced Trainers:</strong> Learn directly from consultants with over 10 years of Oracle ERP delivery experience.</li>
+      <li><strong>Certification Support:</strong> Prepare for Oracle Financials Cloud certification with structured guidance and mock assessments.</li>
+      <li><strong>Placement Assistance:</strong> Resume building, profile optimization, mock interviews, and referral guidance included.</li>
+    </ul>
+  </section>
+
+  <!-- Pricing and Offers -->
+  <!-- <section class="bg-white border p-8 rounded shadow mb-10 max-w-3xl mx-auto">
+    <h2 class="text-xl font-semibold mb-4 text-gray-800">Course Fee and Inclusions</h2>
+    <p class="text-gray-700 mb-2"><strong>Online Mode:</strong> ₹60,000</p>
+    <p class="text-gray-700 mb-2"><strong>Offline (Hyderabad):</strong> ₹1,20,000</p>
+    <p class="text-gray-700 mb-2">Installments available on request</p>
+    <p class="text-gray-700 mt-4"><strong>Extras Included:</strong></p>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>BI Publisher and OTBI reporting crash course</li>
+      <li>Oracle Integration Cloud (OIC) overview</li>
+      <li>Approval workflow setup guide</li>
+    </ul>
+  </section> -->
+
+  <!-- Target Audience -->
+  <section class="bg-gray-100 p-8 rounded shadow mb-10 max-w-3xl mx-auto">
+    <h2 class="text-xl font-semibold text-indigo-700 mb-4">Who Should Enroll</h2>
+    <ul class="list-disc list-inside space-y-2 text-gray-700">
+      <li>Finance professionals aiming to enter ERP consulting</li>
+      <li>ERP consultants transitioning from Oracle EBS or other platforms</li>
+      <li>Graduates with backgrounds in finance, accounting, or business</li>
+      <li>MBAs, CAs, and B.Com graduates seeking tech-enabled roles</li>
+    </ul>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center bg-indigo-700 text-white p-10 rounded shadow mb-10">
+    <h3 class="text-2xl font-semibold mb-4">New Batch Starts Soon – Limited Seats Available</h3>
+    <p class="mb-4">Live classes, recordings, hands-on labs, and placement guidance included</p>
+    <p class="mb-2">Contact: <a href="mailto:training@oraxinno.com">training&#64;oraxinno.com</a> | Phone: [Your Number]</p>
+    <button (click)="showEnrollForm = true" class="mt-4 bg-white text-indigo-700 px-6 py-3 rounded font-medium">
+      Register Your Seat
+    </button>
+
+  </section>
+
+  <!-- Optional Social Preview -->
+  <section class="bg-white p-6 rounded shadow max-w-4xl mx-auto">
+    <h4 class="text-lg font-semibold mb-2 text-gray-800">Sample Caption for Social Sharing</h4>
+    <p class="text-sm text-gray-600">
+      Just launched: Oracle Fusion Financials Training with real project simulations, expert mentorship, and certification prep.
+      Start your career in ERP consulting today. Limited seats. Visit [Your Website URL] to enroll.
+    </p>
+  </section>
+
+  <!-- Enroll Form Popup -->
+
+<!-- Add button to open form -->
+<button (click)="showEnrollForm = true" class="bg-indigo-600 text-white px-6 py-3 rounded shadow font-semibold">
+  Enroll Now
+</button>
+
+<!-- Popup Component - Shows when button is clicked -->
+<!-- <app-enroll-form *ngIf="showEnrollForm" (closeForm)="showEnrollForm = false"></app-enroll-form> -->
+<app-enroll-form
+  *ngIf="showEnrollForm"
+  [course]="'Fusion Financials'"
+  (closeForm)="showEnrollForm = false">
+</app-enroll-form>
+
+</div>
