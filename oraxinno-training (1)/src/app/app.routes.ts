@@ -6,13 +6,12 @@ import { FusionPpmComponent } from './fusion-ppm/fusion-ppm.component';
 import { FusionHcmComponent } from './fusion-hcm/fusion-hcm.component';
 import { FusionScmComponent } from './fusion-scm/fusion-scm.component';
 
-
 export const routes: Routes = [
-  { path: "", redirectTo: '/Homepage', pathMatch: 'full' },
-  {path: "Homepage", component: HomePageComponent},
-  {path: "fusion-financials", component: FusionFinancialsComponent},
-  {path: "oic-training", component:OicBiPublisherComponent},
-  {path:"fusion-ppm", component:FusionPpmComponent},
-  {path:"fusion-hcm", component:FusionHcmComponent},
-  {path:"fusion-scm", component:FusionScmComponent}
+  { path: "", component: HomePageComponent }, // ✅ Direct load home page
+  { path: "fusion-financials", component: FusionFinancialsComponent },
+  { path: "oic-training", component: OicBiPublisherComponent },
+  { path: "fusion-ppm", component: FusionPpmComponent },
+  { path: "fusion-hcm", component: FusionHcmComponent },
+  { path: "fusion-scm", component: FusionScmComponent },
+  { path: '**', redirectTo: '' } // Optional: wildcard redirect
 ];

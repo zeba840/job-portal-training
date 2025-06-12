@@ -1,16 +1,31 @@
 <!-- Header -->
-  <header class="bg-white shadow fixed top-0 w-full z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-600">OraXINNO</h1>
-      <nav class="space-x-6 text-sm font-medium">
-        <a href="#courses" class="text-gray-600 hover:text-indigo-600">Courses</a>
-        <a href="#why" class="text-gray-600 hover:text-indigo-600">Why OraXINNO</a>
-        <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-<router-outlet />
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo + Text -->
+    <a href="/" class="flex items-center gap-0">
+      <img src="../../assets/images/oraXinno.png" alt="OraXinno" class="h-20 w-20 object-contain" />
+      <!-- <span class="text-3xl font-semibold text-indigo-700 leading-none">OraXINNO</span> -->
+    </a>
+
+
+    <!-- Navigation -->
+    <!-- <nav class="space-x-6 hidden md:block">
+      <a href="#top-courses" class="text-gray-700 hover:text-indigo-700 font-medium">Courses</a>
+      <a href="#why" class="text-gray-700 hover:text-indigo-700 font-medium">Why OraXINNO?</a>
+      <a href="#contact" class="text-gray-700 hover:text-indigo-700 font-medium">Contact</a>
+    </nav> -->
+    <nav class="space-x-6 hidden md:block">
+  <a [routerLink]="['/']" fragment="top-courses" class="text-gray-700 hover:text-indigo-700 font-medium">Courses</a>
+  <a [routerLink]="['/']" fragment="why" class="text-gray-700 hover:text-indigo-700 font-medium">Why OraXINNO?</a>
+  <a [routerLink]="['/']" fragment="contact" class="text-gray-700 hover:text-indigo-700 font-medium">Contact</a>
+</nav>
+
+  </div>
+</header>
+
+
+<router-outlet></router-outlet>
 
  <!-- Footer -->
   <footer class="bg-gray-800 text-white text-center py-6 text-sm">

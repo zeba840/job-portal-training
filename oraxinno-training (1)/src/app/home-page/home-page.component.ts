@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+
+declare var lucide: any;
 
 @Component({
   selector: 'app-home-page',
+  standalone: true, // ✅ Important
   imports: [],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css'
-})
-export class HomePageComponent {
+  styleUrls: ['./home-page.component.css'] // ✅ Correct property name
+  })
+
+  
+export class HomePageComponent implements AfterViewInit {
   showEnrollForm: boolean = false;
   scrollToSection(id: string) {
     const element = document.getElementById(id);
@@ -15,6 +20,9 @@ export class HomePageComponent {
     }
   }
   
+  ngAfterViewInit(): void {
+    lucide.createIcons(); // ✅ This will render icons in this component
+  }
   
 
 }
