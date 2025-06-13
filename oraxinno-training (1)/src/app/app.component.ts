@@ -1,27 +1,31 @@
-import { Component, AfterViewInit  } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 declare var lucide: any;
 
 @Component({
   selector: 'app-root',
-  standalone: true, // ✅ Important
+  standalone: true,
   imports: [
-    RouterModule, // ✅ Required for routerLink
-    RouterOutlet  // ✅ Required for <router-outlet>
+    RouterModule,
+    RouterOutlet
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-// export class AppComponent {
-  
-// }
-
 export class AppComponent implements AfterViewInit {
 
-  title = 'oraxinno-training'; // ✅ Declare the property correctly
+  title = 'oraxinno-training';
 
   ngAfterViewInit(): void {
-    lucide.createIcons(); // ✅ Initialize Lucide icons
+    lucide.createIcons();
+  }
+
+  scrollTo(event: Event, sectionId: string): void {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }

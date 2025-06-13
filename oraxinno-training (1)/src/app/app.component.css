@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    /* overflow-y: scroll; */
   }
 body {
   font-family: "Poppins", sans-serif;
@@ -33,6 +34,7 @@ body {
 
 .slider h1, .slider p {
     color: white; /* Ensures text is visible on any background */
+    
 }
 
 .slider button:hover {

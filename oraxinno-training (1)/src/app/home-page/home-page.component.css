@@ -1,75 +1,79 @@
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  /* margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: overlay; */
 }
 
 .slider {
-    background: url('../../assets/images/slider2.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 70px 20px;
-    position: relative;
-    top: 102px; 
-    overflow: hidden;
+  background: url('../../assets/images/slider2.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 70px 20px;
+  top: 102px; /* Changed from top: 102px */
+  /* min-height: calc(100vh - 102px); Added */
+  position: relative;
+  overflow: hidden;
 }
 
-/* Optional: Add dark overlay for better text visibility */
 .slider::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Adjust overlay darkness */
-    z-index: 1;
-    /* border-radius: 10px; */
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .slider-overlay {
-    position: relative;
-    z-index: 2;
-    /* max-width: 900px; */
-    margin: 0 auto;
-    padding: 20px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .slider h1, .slider p {
-    color: white; /* Ensures text is visible on any background */
-    margin: 30px 50px;
-
+  color: white;
+  margin: 30px 50px;
 }
 
 .slider button:hover {
-    background-color: #4b46c8;
+  background-color: #4b46c8;
 }
 
 .contact-info {
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 10px;
-}
-.contact-address {
-    display: flex;
-    align-items: top;
-    font-size: 18px;
-    color: #fff;
-    gap: 8px;
-}
-.material-icons {
-            color: #4b46c8;
-            font-size: 28px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
-  section[id] {
-    scroll-margin-top: 100px; /* Prevents nav overlap */
+.contact-address {
+  display: flex;
+  align-items: top;
+  font-size: 18px;
+  color: #fff;
+  gap: 8px;
+}
+
+.material-icons {
+  color: #4b46c8;
+  font-size: 28px;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
   }
-  
-  /* Responsive nav if needed */
-  @media (max-width: 768px) {
-    nav {
-      display: none; /* You can later replace this with a hamburger menu */
-    }
-  }
+}

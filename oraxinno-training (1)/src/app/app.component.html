@@ -1,33 +1,25 @@
 <!-- Header -->
-
-  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo + Text -->
     <a href="/" class="flex items-center gap-0">
       <img src="../../assets/images/oraXinno.png" alt="OraXinno" class="h-20 w-20 object-contain" />
-      <!-- <span class="text-3xl font-semibold text-indigo-700 leading-none">OraXINNO</span> -->
+      <span class="text-3xl font-semibold text-indigo-700 leading-none">OraXINNO</span>
     </a>
 
-
-    <!-- Navigation -->
-    <!-- <nav class="space-x-6 hidden md:block">
-      <a href="#top-courses" class="text-gray-700 hover:text-indigo-700 font-medium">Courses</a>
-      <a href="#why" class="text-gray-700 hover:text-indigo-700 font-medium">Why OraXINNO?</a>
-      <a href="#contact" class="text-gray-700 hover:text-indigo-700 font-medium">Contact</a>
-    </nav> -->
+    <!-- Navigation (Scroll only, no re-rendering) -->
     <nav class="space-x-6 hidden md:block">
-  <a [routerLink]="['/']" fragment="top-courses" class="text-gray-700 hover:text-indigo-700 font-medium">Courses</a>
-  <a [routerLink]="['/']" fragment="why" class="text-gray-700 hover:text-indigo-700 font-medium">Why OraXINNO?</a>
-  <a [routerLink]="['/']" fragment="contact" class="text-gray-700 hover:text-indigo-700 font-medium">Contact</a>
-</nav>
-
+      <a href="#top-courses" (click)="scrollTo($event, 'top-courses')" class="text-gray-700 hover:text-indigo-700 font-medium">Courses</a>
+      <a href="#why" (click)="scrollTo($event, 'why')" class="text-gray-700 hover:text-indigo-700 font-medium">Why OraXINNO?</a>
+      <a href="#contact" (click)="scrollTo($event, 'contact')" class="text-gray-700 hover:text-indigo-700 font-medium">Contact</a>
+    </nav>
   </div>
 </header>
 
-
+<!-- Page Content -->
 <router-outlet></router-outlet>
 
- <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-6 text-sm">
-    <p>&copy; 2025 OraXINNO. All Rights Reserved.</p>
-  </footer>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center py-6 text-sm">
+  <p>&copy; 2025 OraXINNO. All Rights Reserved.</p>
+</footer>

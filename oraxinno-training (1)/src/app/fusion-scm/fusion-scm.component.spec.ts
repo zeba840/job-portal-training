@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FusionScmComponent } from '../fusion-scm.component';
+// Update the import path below if the file is in the same folder:
+import { FusionScmComponent } from './fusion-scm.component';
 
 describe('FusionScmComponent', () => {
   let component: FusionScmComponent;
