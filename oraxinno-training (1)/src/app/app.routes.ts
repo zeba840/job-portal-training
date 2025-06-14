@@ -6,16 +6,14 @@ import { FusionPpmComponent } from './fusion-ppm/fusion-ppm.component';
 import { FusionHcmComponent } from './fusion-hcm/fusion-hcm.component';
 import { FusionScmComponent } from './fusion-scm/fusion-scm.component';
 import { FullstackComponent } from './fullstack/fullstack.component';
+
 export const routes: Routes = [
-  { path: "", component: HomePageComponent }, // ✅ Direct load home page
-  { path: "fusion-financials", component: FusionFinancialsComponent },
-  { path: "oic-training", component: OicBiPublisherComponent },
-   { path: '**', redirectTo: '' },
-  { path: "fusion-ppm", component: FusionPpmComponent },
-  { path: "fusion-hcm", component: FusionHcmComponent },
-  { path: "fusion-scm", component: FusionScmComponent },
-  {path:"fullstack",component:FullstackComponent},
-  { path: '**', redirectTo: '' } // Optional: wildcard redirect
+  { path: '', component: HomePageComponent },
+  { path: 'fusion-financials', component: FusionFinancialsComponent },
+  { path: 'oic-training', component: OicBiPublisherComponent },
+  { path: 'fusion-ppm', component: FusionPpmComponent },
+  { path: 'fusion-hcm', component: FusionHcmComponent },
+  { path: 'fusion-scm', component: FusionScmComponent },
+  { path: 'fullstack', component: FullstackComponent },
+  { path: '**', redirectTo: '' } // ✅ Always keep this at the end
 ];
-
-

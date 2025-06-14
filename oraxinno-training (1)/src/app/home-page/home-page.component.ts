@@ -1,11 +1,13 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 declare var lucide: any;
 
 @Component({
   selector: 'app-home-page',
   standalone: true, // ✅ Important
-  imports: [],
+  imports: [RouterModule,CommonModule], // ✅ Import RouterModule for routing
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'] // ✅ Correct property name
   })

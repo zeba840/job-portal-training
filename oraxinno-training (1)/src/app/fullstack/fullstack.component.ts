@@ -4,14 +4,15 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-fullstack',
-  imports: [],
+  imports: [CommonModule, EnrollFormComponent],
+  standalone: true,
   templateUrl: './fullstack.component.html',
   styleUrl: './fullstack.component.css'
 })
 export class FullstackComponent {
   showEnrollForm = false;
   openEnrollPopup(){
-    
+
   }
 
 

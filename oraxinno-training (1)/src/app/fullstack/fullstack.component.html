@@ -1,1 +1,128 @@
-<p>fullstack works!</p>
+<!-- fullstack.component.html -->
+<div class="container mx-auto pt-28">
+
+  <!-- Hero Section -->
+  <section class="slider text-center">
+    <div class="slider-overlay">
+      <h1 class="text-4xl font-bold mb-4 text-white">
+        Launch Your Fullstack Career in Just 90 Days — With Real Projects, Mentorship & Job Support
+      </h1>
+      <p class="text-lg text-white max-w-3xl mx-auto mb-6">
+        Join the #1 Practical Fullstack Developer Training Program designed for freshers, final-year students, and working professionals ready to land high-paying IT jobs — even without prior coding experience.
+      </p>
+      <button (click)="showEnrollForm = true" class="bg-indigo-600 text-white px-6 py-3 rounded shadow font-semibold">
+        Enroll Now
+      </button>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="w-full py-12">
+    <div class="md:flex-row items-center">
+      <h2 class="text-2xl font-semibold text-center text-indigo-700 mb-6">
+        Why Choose Our Fullstack Developer Program?
+      </h2>
+
+      <!-- Curriculum -->
+      <section class="bg-gray-50 border p-8 rounded shadow mb-10 max-w-5xl mx-auto">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-700">1. Project-Based Curriculum Aligned with Job Roles</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-medium mb-2">Frontend</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>HTML5, CSS3, JavaScript, Bootstrap</span></li>
+              <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>Angular or React</span></li>
+              <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>Responsive Design with Tailwind</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2">Backend & Tools</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>Node.js, Express.js, REST APIs</span></li>
+              <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>Databases: MySQL + MongoDB</span></li>
+              <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>Version Control: Git & GitHub workflows</span></li>
+              <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>Bonus: DevOps Basics (Jenkins, Docker)</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expert Mentors -->
+      <section class="bg-white border p-8 rounded shadow mb-10 max-w-5xl mx-auto">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-700">2. Learn From Industry Experts</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>Train under Fullstack Developers & Architects</li>
+          <li>10+ years of real-time experience</li>
+          <li>Monthly mock interviews & detailed feedback</li>
+          <li>Code reviews like real job teams</li>
+        </ul>
+      </section>
+
+      <!-- Practical Projects -->
+      <section class="bg-gray-50 border p-8 rounded shadow mb-10 max-w-5xl mx-auto">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-700">3. Real Projects. Real Experience.</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>E-commerce site, Job portal, Blogging platform</li>
+          <li>Admin dashboard with protected routes</li>
+          <li>REST APIs with JWT Authentication</li>
+          <li>Portfolio-ready GitHub repos with deployments</li>
+        </ul>
+      </section>
+
+      <!-- Certification & Job Support -->
+      <section class="bg-white border p-8 rounded shadow mb-10 max-w-5xl mx-auto">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-700">4. Certification + Job Support</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>Course Completion Certificate</li>
+          <li>Resume & LinkedIn optimization</li>
+          <li>Mock interviews + HR Q&A access</li>
+          <li>Weekly job alert groups + referral network</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <!-- Bonuses -->
+  <section class="bg-white border p-8 rounded shadow mb-10 max-w-5xl mx-auto">
+    <h2 class="text-xl font-semibold text-indigo-700 mb-4">Bonuses & Tools You Get:</h2>
+    <ul class="space-y-3 text-gray-700">
+      <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>100+ Interview Questions with Expert Answers</span></li>
+      <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>Resume & LinkedIn Templates</span></li>
+      <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>GitHub Profile Optimization Checklist</span></li>
+      <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>90-Day Personal Career Roadmap</span></li>
+      <li class="flex items-start"><span class="text-green-500 mr-2">✓</span><span>Bonus: Freelancing for Fullstack Developers</span></li>
+    </ul>
+  </section>
+
+  <!-- Target Audience -->
+  <section class="bg-gray-50 p-8 rounded shadow mb-10 max-w-5xl mx-auto">
+    <h2 class="text-xl font-semibold text-indigo-700 mb-4">Who Should Join?</h2>
+    <ul class="list-disc list-inside space-y-2 text-gray-700">
+      <li>Final-year B.Tech/degree students</li>
+      <li>Freshers seeking IT jobs</li>
+      <li>Non-CS background professionals switching careers</li>
+      <li>Career gap or laid-off professionals</li>
+      <li>Self-taught developers needing structured learning</li>
+    </ul>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center bg-indigo-700 text-white p-10 rounded shadow">
+    <h3 class="text-2xl font-semibold mb-4">Join 5,000+ Learners Now Working in Top Tech Companies!</h3>
+    <p class="mb-4">Next Batch Starts Soon – Limited Seats Available</p>
+    <p class="mb-2">
+      Contact: <a href="mailto:training@oraxinno.com">training&#64;oraxinno.com</a> | Phone: +91 8897364296
+    </p>
+    <button (click)="showEnrollForm = true" class="mt-4 bg-white text-indigo-700 px-6 py-3 rounded font-medium">
+      Register Now
+    </button>
+  </section>
+
+  <!-- Enroll Form Popup -->
+  <app-enroll-form
+    *ngIf="showEnrollForm"
+    [course]="'Fullstack Development'"
+    (closeForm)="showEnrollForm = false">
+  </app-enroll-form>
+
+</div>
