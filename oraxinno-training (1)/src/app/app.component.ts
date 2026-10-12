@@ -1,27 +1,37 @@
-import { Component, AfterViewInit  } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  inject,
+  PLATFORM_ID
+} from '@angular/core';
+
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 declare var lucide: any;
 
 @Component({
   selector: 'app-root',
-  standalone: true, // ✅ Important
+  standalone: true,
   imports: [
-    RouterModule, // ✅ Required for routerLink
-    RouterOutlet  // ✅ Required for <router-outlet>
+    RouterModule,
+    RouterOutlet
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-// export class AppComponent {
-  
-// }
-
 export class AppComponent implements AfterViewInit {
 
-  title = 'oraxinno-training'; // ✅ Declare the property correctly
+  title = 'oraxinno-training';
+
+  private platformId = inject(PLATFORM_ID);
 
   ngAfterViewInit(): void {
-    lucide.createIcons(); // ✅ Initialize Lucide icons
+    // Initialize Lucide icons only in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    }
   }
 }
